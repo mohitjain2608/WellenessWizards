@@ -1,0 +1,20 @@
+<input type="file" (change)="onFileChange($event)"  multiple="false" placeholder="Enter your file" />
+
+<ng-multiselect-dropdown class="dyeDropdown"
+  [placeholder]="'Select a Dye'"
+  [settings]="dropdownSettings"
+  [data]="dyeDropDownList"
+  [(ngModel)]="selectedDyes"
+  (onSelect)="onItemSelect($event)"
+  (onSelectAll)="onSelectAll($event)"
+  (onDeSelect)="onItemDeSelect($event)"
+>
+</ng-multiselect-dropdown>
+<div>
+  
+    <h1>Line chart</h1>
+    <app-line-graph [graphData]="lineChartData"></app-line-graph>
+    <h1>Pie-chart</h1>
+  <app-pie-chart [pieChartData]="pieChartData"></app-pie-chart>
+</div>
+
